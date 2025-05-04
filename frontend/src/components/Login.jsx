@@ -32,7 +32,7 @@ function Login() {
     try {
       const { data } = await axios.post(
         // "http://localhost:4002/api/v1/user/login",
-        '${BACKEND_URL}/user/login',
+        `${BACKEND_URL}/user/login`,
         {
           email: formData.email,
           password: formData.password,

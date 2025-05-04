@@ -30,7 +30,7 @@ function Signup() {
     setError("");
     try {
       const { data } = await axios.post(
-        '${BACKEND_URL}/user/signup',
+        `${BACKEND_URL}/user/signup`,
         {
           firstName: formData.firstName,
           lastName: formData.lastName,

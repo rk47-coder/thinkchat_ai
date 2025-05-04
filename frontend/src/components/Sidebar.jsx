@@ -15,7 +15,7 @@ function Sidebar({ onClose }) {
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        '${BACKEND_URL}/user/logout',
+        `${BACKEND_URL}/user/logout`,
         {
           withCredentials: true,
         }

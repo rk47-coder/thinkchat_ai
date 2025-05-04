@@ -49,7 +49,7 @@ function Promt() {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.post(
-        '${BACKEND_URL}/deepseekai/promt',
+        `${BACKEND_URL}/deepseekai/promt`,
         { content: trimmed },
         {
           headers: {
