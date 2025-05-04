@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://thinkchat-ai.onrender.com";
+export const BACKEND_URL = "https://thinkchat-ai.onrender.com/api/v1";
