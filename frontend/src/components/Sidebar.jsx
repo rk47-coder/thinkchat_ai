@@ -3,6 +3,7 @@ import { LogOut, X } from "lucide-react";
 import { useAuth } from "../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BACKEND_URL } from "../utils/utils";
 
 
 function Sidebar({ onClose }) {
@@ -14,7 +15,7 @@ function Sidebar({ onClose }) {
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:4002/api/v1/user/logout",
+        '${BACKEND_URL}/user/logout',
         {
           withCredentials: true,
         }

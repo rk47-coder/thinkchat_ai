@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { BACKEND_URL } from "../utils/utils";
 
 function Promt() {
   const [inputValue, setInputValue] = useState("");
@@ -48,7 +49,7 @@ function Promt() {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.post(
-        "http://localhost:4002/api/v1/deepseekai/promt",
+        '${BACKEND_URL}/deepseekai/promt',
         { content: trimmed },
         {
           headers: {

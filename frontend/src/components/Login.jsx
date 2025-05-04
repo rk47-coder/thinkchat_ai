@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthProvider";
+import { BACKEND_URL } from "../utils/utils";
 function Login() {
   const [formData, setFormData] = useState({
     email: "",
@@ -30,7 +31,8 @@ function Login() {
     setError("");
     try {
       const { data } = await axios.post(
-        "http://localhost:4002/api/v1/user/login",
+        // "http://localhost:4002/api/v1/user/login",
+        '${BACKEND_URL}/user/login',
         {
           email: formData.email,
           password: formData.password,
